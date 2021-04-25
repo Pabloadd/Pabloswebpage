@@ -1,0 +1,11 @@
+# ignore node modules
+node_modules/
+
+# ignore some files
+*.com
+*.class
+*.dll
+*.o
+*.so
+*.log
+
