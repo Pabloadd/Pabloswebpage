@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 /* https://wallhaven.cc/api/v1/search?categories=101&atleast=1080x1920 */
 body{
     background-color: bisque;
