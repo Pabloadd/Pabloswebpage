@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Pabloadd/Pabloswebpage#readme",
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "pexels": "^1.2.1",
     "tailwindcss": "^2.1.1"
   },

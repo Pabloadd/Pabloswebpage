@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style/intouch.css" rel="stylesheet"/>
+        <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">  -->
+        <link href="node_modules/tailwindcss/dist/tailwind.css" rel="stylesheet"/> 
+    </head>
+    <body>
+        <!--<div class="main-content-intouch min-h-screen" width="auto" height="">
+            <h1 class="hover:text-white">Hello!</h1>
+        </div>-->
+        <main class='relative h-screen w-screen'>
+            <img
+            src='https://source.unsplash.com/random/1920x1080'
+            alt='main background image'
+            class='absolute inset-0 w-full h-full object-cover'/>
+
+            <div class='absolute inset-0 flex justify-center items-center'>
+                <!-- backdrop-filter backdrop-blur-md backdrop-grayscale backdrop-brightness-50-->
+                <div class='w-full max-w-md bg-green-900 backdrop-blur-md backdrop-grayscale backdrop-brightness-50 sm:rounded-2xl text-white py-12 px-4 sm:px-8'>
+                    <h1 class='text-center text-3xl sm:text-4xl font-extrabold sm:leading-[3rem]'>
+                        Get in touch?
+                        <span class='text-yellow-400'>Catch their attention!</span>
+                    </h1>
+                    <p class='mt-6 text-lg sm:text-xl'>
+                        Im software developer, Im being part of web development as a back-end Django, DataAnalysis procesing data with pythin using pandas library and creating reports from a nosql database
+                    </p>
+                    <form class='mt-8 w-full flex'>
+                        <input class='border rounded-tl rounded-bl border-gray-100 w-full px-4 py-2 text-gray-900'
+                            placeholder='example@mail.com'
+                            type='email'/>
+                        <button
+                            type='submit'
+                            class='bg-yellow-400 text-gray-900 px-4 py-2 font-medium sm:text-lg rounded-tr rounded-br'>
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
