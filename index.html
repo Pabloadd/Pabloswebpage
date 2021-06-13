@@ -9,17 +9,20 @@
     <!-- <link href="node_modules/tailwindcss/tailwind.css" rel="stylesheet"/> -->
     <title>PablosPage</title>
 </head>
-<body>
+<body style="background:url(https://source.unsplash.com/random/1920x1080)">
     <script>
 
-      changeBack();
+      
+      
       async function changeBack(){
-        var jsonDataImg = await fetch("https://wallhaven.cc/api/v1/search?categories=101&atleast=1920x1080&purity=100");
-        console.log(jsonDataImg);
-        console.log("hola");
-      }
-      let previousScrollPosition = 0;
+        return await fetch('https://source.unsplash.com/random/1920x1080')
+      };
+      response = changeBack();
+      //myResponse = Json.Parse(response);
+      console.log(response);
+      console.log('hola');
 
+      let previousScrollPosition = 0;
       const isScrollingDown = () => {
         let currentScrolledPosition = window.scrollY || window.pageYOffset;
         let scrollingDown;
