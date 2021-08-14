@@ -5,21 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> 
-    <link href="index.css" rel="stylesheet"/>
+    <link href="style/index.css" rel="stylesheet"/>
     <!-- <link href="node_modules/tailwindcss/tailwind.css" rel="stylesheet"/> -->
     <title>PablosPage</title>
 </head>
-<body>
+<body style="background:url(https://source.unsplash.com/random/1920x1080)">
     <script>
 
-      changeBack();
+      
+      
       async function changeBack(){
-        var jsonDataImg = await fetch("https://wallhaven.cc/api/v1/search?categories=101&atleast=1920x1080&purity=100");
-        console.log(jsonDataImg);
-        console.log("hola");
-      }
-      let previousScrollPosition = 0;
+        return await fetch('https://source.unsplash.com/random/1920x1080')
+      };
+      response = changeBack();
+      //myResponse = Json.Parse(response);
+      console.log(response);
+      // console.log('hola'); 
 
+      let previousScrollPosition = 0;
       const isScrollingDown = () => {
         let currentScrolledPosition = window.scrollY || window.pageYOffset;
         let scrollingDown;
@@ -46,19 +49,32 @@
     </script>
 <!-- anadir un saludo segun la hora ejem: buenos dias o buenas tardes, like spotify -->
     <div class="block lg:hidden">
+
+    <!--car component-->
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      <div class="md:flex">
+        <div class="md:flex-shrink-0">
+            <img class="h-48 w-full object-cover md:w-48" src="https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=448&q=80" alt="A cat">
+        </div>
+        <div class="p-8">
+            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Hi! my name is Pablo Dominguez</div>
+            <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Software developer, back-end developer, data analysis</a>
+            <p class="mt-2 text-gray-500">According to a study, it has been proven that there is a tight bond between cats and humans.</p>
+        </div>
+        </div>
+      </div>
+    <!-- end car component-->
+
+    <div class="block ">
       <button
           class="navbar-burger flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
-          <svg class="fill-current h-6 w-6 text-gray-700" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+          <img src="img/forward_arrow.svg" alt="expand menu" width="30px">
       </button>
     </div>
-    <div id="main-nav" class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800 lg:w-auto hidden">
+    <div id="main-nav" class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800 lg:w-64 hidden">
       <div class="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
         <div class="flex items-center justify-center h-14 border-b">
-          <div class="block lg:hidden">
+          <div class="block ">
             <button
                 class="navbar-burger flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white">
                 <svg class="fill-current h-6 w-6 text-gray-700" viewBox="0 0 20 20"  xmlns="http://www.w3.org/2000/svg">
@@ -66,6 +82,7 @@
                      <title>Menu</title> 
                      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /> 
                 </svg> 
+                <img src="img/arrow_back.svg" alt="collapse menu" width="30px">
             </button>
           </div>
         </div>
@@ -108,6 +125,14 @@
                 </span>
                 <span class="ml-2 text-sm tracking-wide truncate">Notifications</span>
                 <span class="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
+              </a>
+            </li>
+            <li>
+              <a href="intouch.html" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Contact</span>
               </a>
             </li>
             <li class="px-5">
@@ -168,6 +193,8 @@
         </div>
       </div>
     </div>
+
+    
     <script>
       // Navbar Toggle
       document.addEventListener('DOMContentLoaded', function () {
